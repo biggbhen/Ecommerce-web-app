@@ -2,4 +2,41 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.container {
+  height: 100vh;
+  border: 2px solid red;
+  padding: 10px 70px;
+  header {
+    border: 2px solid red;
+
+    padding: 10px;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      div {
+        border: 2px solid black;
+        width: 15%;
+
+        display: flex;
+        justify-content: space-between;
+      }
+      .leftSect {
+        width: 60%;
+      }
+    }
+    ul {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      // li {
+      //   // margin-right: ;
+      // }
+    }
+  }
+  .productSection {
+    display: flex;
+  }
 }

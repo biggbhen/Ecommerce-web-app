@@ -1,1 +1,1 @@
-*{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box;margin:0;padding:0;list-style:none;text-decoration:none}.container{height:100vh;border:2px solid red;padding:10px 70px}.container header{border:2px solid red;padding:10px}.container header nav{display:flex;justify-content:space-between}.container header nav div{border:2px solid #000;width:15%;display:flex;justify-content:space-between}.container header nav .leftSect{width:60%}.container header ul{width:70%;display:flex;justify-content:space-between}.container .productSection{display:flex}
