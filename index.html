@@ -6,39 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecommerce web app</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <section class="container">
       <header>
         <nav>
           <div class="leftSect">
-            <figure><img src="#" alt="logo" /></figure>
+            <figure class="logo">
+              <img src="./images/logo.svg" alt="logo" />
+            </figure>
             <ul>
-              <li>Collections</li>
-              <li>Men</li>
-              <li>Women</li>
-              <li>About</li>
-              <li>Contact</li>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
             </ul>
           </div>
 
-          <div>
-            <figure><img src="#" alt="cart" /></figure>
-            <figure><img src="#" alt="profileIcon" /></figure>
+          <div class="rightSect">
+            <figure><img src="./images/icon-cart.svg" alt="cart" /></figure>
+            <figure>
+              <img src="./images/image-avatar.png" alt="profileIcon" />
+            </figure>
           </div>
         </nav>
       </header>
       <section class="productSection">
         <section class="productDisplay">
-          <div><img src="#" alt="productImage" /></div>
+          <div class="productImage">
+            <img src="./images/image-product-1.jpg" alt="productImage" />
+          </div>
           <div class="products">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><img src="./images/image-product-1.jpg" alt="product1" /></div>
+            <div><img src="./images/image-product-2.jpg" alt="product2" /></div>
+            <div><img src="./images/image-product-3.jpg" alt="product3" /></div>
+            <div><img src="./images/image-product-4.jpg" alt="product4" /></div>
           </div>
         </section>
-        <section class="prouctDetails"></section>
+        <section class="prouctDetails">
+          <div>
+            <h1>SNEAKERS COMPANY</h1>
+            <h2>Fall Limited Edition Sneakers</h2>
+            <p>
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything the weather can offer.
+            </p>
+            <div class="price">
+              <p>$125.00 <span class="percentReduction">50%</span></p>
+            </div>
+            <span class="priceSlash">$250.00</span>
+            <div class="itemManagement">
+              <div class="addItems"></div>
+              <div class="addToCart"></div>
+            </div>
+          </div>
+        </section>
       </section>
     </section>
     <script src="./app.js"></script>
