@@ -7,42 +7,38 @@
   font-family: 'Kumbh Sans', sans-serif;
 }
 .container {
-  border: 1px solid red;
-  padding: 10px 5%;
+  // border: 1px solid red;
+  padding: 10px 4%;
   header {
     border-bottom: 1px solid #e8e7ec;
-    padding: 10px;
+    padding: 0.625rem;
     nav {
       // border: 1px solid red;
       display: flex;
       justify-content: space-between;
       div {
-        border: 1px solid red;
-        width: 10%;
+        // border: 1px solid red;
         display: flex;
         align-items: center;
       }
-
       a {
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
         color: #b4b5b9;
       }
       .leftSect {
-        width: 65%;
         .logo {
-          width: 15%;
+          width: 115px;
           height: 1.5rem;
           cursor: pointer;
-          margin-right: 2rem;
+          margin-right: 1.875rem;
           img {
             width: 100%;
             height: 100%;
             display: block;
           }
         }
-
         ul {
           border: 1px solid red;
-          // width: 80%;
           display: flex;
           li {
             margin-right: 2rem;
@@ -50,10 +46,13 @@
         }
       }
       .rightSect {
+        justify-content: flex-end;
+        .avatar {
+          margin-left: 1rem;
+        }
         figure {
           cursor: pointer;
-          width: 35px;
-
+          width: 30px;
           img {
             width: 100%;
             height: 100%;
@@ -63,18 +62,19 @@
     }
   }
   .productSection {
-    padding: 10px 40px;
+    padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    // border: 1px solid green;
+    justify-content: space-around;
+    margin-top: 20px;
+    border: 1px solid green;
     & > * {
-      width: 40%;
+      border: 1px solid red;
+      width: 43%;
     }
     .productDisplay {
-      width: 50%;
+      // width: 50%;
       .productImage {
-        height: 26rem;
+        height: 28rem;
         // border: 1px solid red;
         border-radius: 6px;
         img {
@@ -105,7 +105,7 @@
     }
   }
   .prouctDetails {
-    padding-left: 10px;
+    // padding-top: 50px;
     // border: 1px solid black;
     display: flex;
     align-items: center;
