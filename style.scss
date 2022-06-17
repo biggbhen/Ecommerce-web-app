@@ -7,7 +7,11 @@
   font-family: 'Kumbh Sans', sans-serif;
 }
 .container {
-  padding: 10px 4%;
+  margin: auto;
+  width: 95%;
+  max-width: 1250px;
+  // border: 1px solid black;
+  padding: 0 5%;
 }
 header {
   position: relative;
@@ -18,7 +22,7 @@ header {
     cursor: pointer;
     position: absolute;
     width: 18px;
-    top: 13px;
+    top: 10px;
     transform: translateY(50%);
     z-index: 4;
     display: none;
@@ -29,7 +33,7 @@ header {
   }
 
   a {
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
     color: #b4b5b9;
   }
   a:hover {
@@ -49,7 +53,8 @@ header {
       // position: relative;
       width: 75%;
       .logo {
-        width: 13%;
+        // border: 1px solid;
+        width: 5.5rem;
         height: 1.6rem;
         cursor: pointer;
         margin-right: 5%;
@@ -74,7 +79,7 @@ header {
 
       figure {
         cursor: pointer;
-        width: 30px;
+        width: 25px;
         img {
           width: 100%;
           height: 100%;
@@ -88,18 +93,18 @@ header {
   padding: 10px 20px;
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 4rem;
   // border: 1px solid green;
   & > * {
     // border: 1px solid red;
-    width: 43%;
+    width: 40%;
   }
 }
 .productDisplay {
-  width: 50%;
-
+  width: 55%;
+  max-width: 25rem;
   .productImage {
-    height: 28rem;
+    height: 21rem;
     // border: 1px solid red;
     border-radius: 6px;
     img {
@@ -131,7 +136,7 @@ header {
 .prouctDetails {
   display: flex;
   align-items: center;
-
+  // border: 2px solid black;
   h1 {
     color: #f28735;
     font-size: clamp(0.9rem, 1.5vw, 1rem);
@@ -177,7 +182,7 @@ header {
   }
   .addToCart {
     display: flex;
-    width: 45%;
+    width: 50%;
     cursor: pointer;
     border-radius: 6px;
     background-color: #ff7a16;
@@ -185,11 +190,11 @@ header {
     align-items: center;
     i {
       color: #fff;
-      margin-right: 1rem;
+      margin-right: 0.7rem;
     }
     div {
       color: #fff;
-      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+      font-size: clamp(0.85rem, 1.5vw, 0.9rem);
     }
   }
 }
