@@ -94,7 +94,7 @@
     background-color: rgba($color: #fff, $alpha: 0.7);
   }
   .prouctDetails {
-    padding: 25px 20px 50px 20px;
+    padding: 25px 20px 60px 20px;
     .price {
       display: flex;
       justify-content: space-between;
@@ -103,11 +103,13 @@
         font-weight: 800;
       }
       .percentReduction {
-        font-size: clamp(1rem, 2vw, 1.1rem);
-        margin-left: 0.5rem;
+        // font-size: clamp(1rem, 2vw, 1.1rem);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
         color: #e3905a;
         background-color: #feeedf;
-        border-radius: 3px;
+        padding: 0;
       }
       .priceSlash {
         font-size: clamp(0.8rem, 2vw, 1.2rem);
