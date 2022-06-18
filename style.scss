@@ -101,11 +101,12 @@ header {
   }
 }
 .productDisplay {
+  // border: 1px solid red;
   width: 55%;
   max-width: 25rem;
   .productImage {
+    cursor: pointer;
     height: 21rem;
-    // border: 1px solid red;
     border-radius: 6px;
     position: relative;
     img {
@@ -117,6 +118,7 @@ header {
   }
 
   .products {
+    cursor: pointer;
     height: 6rem;
     // border: 1px solid black;
     margin-top: 1rem;
@@ -149,6 +151,7 @@ header {
     transform: translateY(-50%);
     border-radius: 50%;
     background-color: rgba($color: #fff, $alpha: 0.5);
+    cursor: pointer;
     display: none;
     i {
       font-size: 1.3rem;
@@ -198,7 +201,6 @@ header {
   // border: 1px solid black;
   .addItems {
     margin-right: 3%;
-    // border: 1px solid red;
     display: flex;
     width: 30%;
     text-align: center;
