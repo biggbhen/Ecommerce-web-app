@@ -186,14 +186,27 @@ header {
     line-height: 1.5rem;
     font-size: clamp(0.9rem, 2vw, 1rem);
     margin-bottom: 1rem;
+    // font-weight: 600;
   }
   .price {
+    .recentPrice {
+      font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+      font-weight: 800;
+    }
     .percentReduction {
+      padding: 2px;
+      font-size: clamp(0.9rem, 2vw, 1rem);
       margin-left: 0.5rem;
       color: #e3905a;
       background-color: #feeedf;
       border-radius: 3px;
     }
+    .priceSlash {
+      font-weight: 600;
+    }
+  }
+  .about {
+    color: #6a6b6f;
   }
 }
 .itemManagement {
