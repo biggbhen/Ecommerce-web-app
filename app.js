@@ -35,9 +35,7 @@ addOrRemoveItem.addEventListener('click', (x) => {
 
 nextOrPrevSlide.addEventListener('click', (x) => {
   let slides = [...imgArr];
-
-  const current = document.querySelector('.active');
-
+  // next
   if (x.target.className === 'next') {
     let nextIndex;
     // let currIndex;
@@ -51,6 +49,20 @@ nextOrPrevSlide.addEventListener('click', (x) => {
       nextIndex = 0;
     }
     slides[nextIndex].classList.add('active');
-    console.log(slides[0]);
+  }
+  // prev
+  if (x.target.className === 'previous') {
+    let prevIndex;
+    // let currIndex;
+    slides.forEach((x, index) => {
+      if (x.classList.contains('active')) {
+        prevIndex = index - 1;
+      }
+      x.classList.remove('active');
+    });
+    if (prevIndex < 0) {
+      prevIndex = imgArr.length - 1;
+    }
+    slides[prevIndex].classList.add('active');
   }
 });
