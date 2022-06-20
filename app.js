@@ -1,7 +1,12 @@
-// hamburger menu slide
+// my variables
 const hamIcon = document.querySelector('.ham'),
   hamburger = document.querySelector('.hamburger'),
-  addOrRemoveItem = document.querySelector('.addItems');
+  addOrRemoveItem = document.querySelector('.addItems'),
+  numOfItems = document.querySelector('.numOfItems');
+
+// load all eventListeners
+
+// side bar
 hamIcon.addEventListener('click', (e) => {
   if (e.target.className === 'fa-solid fa-bars') {
     e.target.className = 'fa-solid fa-xmark';
@@ -12,8 +17,18 @@ hamIcon.addEventListener('click', (e) => {
   }
 });
 
-// add to num of items
+// add counter functionality
+let counter = 0;
 addOrRemoveItem.addEventListener('click', (x) => {
   if (x.target.className === 'fa-solid fa-plus') {
+    counter++;
+    numOfItems.innerHTML = counter;
+  }
+  if (x.target.className === 'fa-solid fa-minus') {
+    counter--;
+    if (counter <= 0) {
+      counter = 0;
+    }
+    numOfItems.innerHTML = counter;
   }
 });
