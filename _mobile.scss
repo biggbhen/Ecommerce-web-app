@@ -70,8 +70,11 @@
     .productImage {
       height: 25rem;
       border-radius: 0;
-      img {
+      .imageSlides {
         border-radius: 0;
+        img {
+          border-radius: 0;
+        }
       }
     }
     .products {
@@ -86,11 +89,12 @@
       right: 20px;
     }
   }
-  .navigation div {
+  .navigation .carousel div {
     display: flex;
     background-color: rgba($color: #fff, $alpha: 1);
   }
-  .navigation div:hover {
+  .navigation .carousel div:hover {
+    // border: 1px solid red;
     background-color: rgba($color: #fff, $alpha: 0.7);
   }
   .prouctDetails {
