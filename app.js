@@ -2,9 +2,8 @@
 const hamIcon = document.querySelector('.ham'),
   hamburger = document.querySelector('.hamburger'),
   addOrRemoveItem = document.querySelector('.addItems'),
-  numOfItems = document.querySelector('.numOfItems');
-
-// load all eventListeners
+  numOfItems = document.querySelector('.numOfItems'),
+  nextOrPrevSlide = document.querySelector('.navigation');
 
 // side bar
 hamIcon.addEventListener('click', (e) => {
@@ -32,3 +31,7 @@ addOrRemoveItem.addEventListener('click', (x) => {
     numOfItems.innerHTML = counter;
   }
 });
+
+// nextOrPrevSlide.addEventListener('click', (x)=>{
+
+// })
