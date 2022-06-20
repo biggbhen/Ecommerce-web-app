@@ -32,11 +32,7 @@
     padding: 0;
   }
 }
-@media (max-width: 650px) {
-  // .container {
-  //   padding: 0;
-  // }
-}
+
 @media (max-width: 575px) {
   header .ham {
     display: block;
@@ -81,22 +77,12 @@
       display: none;
     }
   }
-  .navigation {
-    .previous {
-      left: 20px;
-    }
-    .next {
-      right: 20px;
-    }
-  }
+
   .navigation .carousel div {
     display: flex;
     background-color: rgba($color: #fff, $alpha: 1);
   }
-  .navigation .carousel div:hover {
-    // border: 1px solid red;
-    background-color: rgba($color: #fff, $alpha: 0.7);
-  }
+
   .prouctDetails {
     padding: 25px 20px 60px 20px;
     .price {

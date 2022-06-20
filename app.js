@@ -3,7 +3,8 @@ const hamIcon = document.querySelector('.ham'),
   hamburger = document.querySelector('.hamburger'),
   addOrRemoveItem = document.querySelector('.addItems'),
   numOfItems = document.querySelector('.numOfItems'),
-  nextOrPrevSlide = document.querySelector('.navigation');
+  nextOrPrevSlide = document.querySelector('.carousel'),
+  imgArr = document.querySelectorAll('.imageSlides');
 
 // side bar
 hamIcon.addEventListener('click', (e) => {
@@ -32,6 +33,24 @@ addOrRemoveItem.addEventListener('click', (x) => {
   }
 });
 
-// nextOrPrevSlide.addEventListener('click', (x)=>{
+nextOrPrevSlide.addEventListener('click', (x) => {
+  let slides = [...imgArr];
 
-// })
+  const current = document.querySelector('.active');
+
+  if (x.target.className === 'next') {
+    let nextIndex;
+    // let currIndex;
+    slides.forEach((x, index) => {
+      if (x.classList.contains('active')) {
+        nextIndex = index + 1;
+      }
+      x.classList.remove('active');
+    });
+    if (nextIndex > imgArr.length - 1) {
+      nextIndex = 0;
+    }
+    slides[nextIndex].classList.add('active');
+    console.log(slides[0]);
+  }
+});
