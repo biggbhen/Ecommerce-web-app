@@ -14,7 +14,7 @@
 }
 @media (max-width: 685px) {
   .container {
-    padding: 0 2%;
+    padding: 5px 2%;
     width: 100%;
   }
   .productSection {
@@ -31,11 +31,29 @@
   .container {
     padding: 0;
   }
+  header {
+    // border: 1px solid;
+    padding: 0 3px;
+  }
+}
+@media (max-width: 685px) {
+  header .cartDetails {
+    right: 10px;
+  }
 }
 
 @media (max-width: 575px) {
   header .ham {
     display: block;
+  }
+  header nav {
+    height: 5rem;
+  }
+  header .cartDetails {
+    top: 6rem;
+    width: 98%;
+    left: 1%;
+    height: 18rem;
   }
   header nav .rightSect {
     width: 30%;

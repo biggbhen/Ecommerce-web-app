@@ -6,9 +6,11 @@ const hamIcon = document.querySelector('.ham'),
   nextOrPrevSlide = document.querySelector('.carousel'),
   imgArr = document.querySelectorAll('.imageSlides'),
   prodArr = document.querySelectorAll('.productSlides'),
+  cart = document.querySelector('.cart'),
+  cartDetails = document.querySelector('.cartDetails'),
   auto = true,
   intervalTime = 5000;
-
+// console.log(cart);
 // side bar
 hamIcon.addEventListener('click', (e) => {
   if (e.target.className === 'fa-solid fa-bars') {
@@ -74,3 +76,12 @@ nextOrPrevSlide.addEventListener('click', (x) => {
 // if (auto) {
 //   slideInterval = setInterval((nextSlides), intervalTime);
 // }
+
+// display cart details
+cart.addEventListener('click', (e) => {
+  if (cartDetails.className === 'cartDetails') {
+    cartDetails.classList.add('active');
+  } else {
+    cartDetails.classList.remove('active');
+  }
+});
