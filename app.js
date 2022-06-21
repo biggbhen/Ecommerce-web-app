@@ -4,7 +4,10 @@ const hamIcon = document.querySelector('.ham'),
   addOrRemoveItem = document.querySelector('.addItems'),
   numOfItems = document.querySelector('.numOfItems'),
   nextOrPrevSlide = document.querySelector('.carousel'),
-  imgArr = document.querySelectorAll('.imageSlides');
+  imgArr = document.querySelectorAll('.imageSlides'),
+  prodArr = document.querySelectorAll('.productSlides'),
+  auto = true,
+  intervalTime = 5000;
 
 // side bar
 hamIcon.addEventListener('click', (e) => {
@@ -33,12 +36,12 @@ addOrRemoveItem.addEventListener('click', (x) => {
   }
 });
 
+// carousel slide
 nextOrPrevSlide.addEventListener('click', (x) => {
   let slides = [...imgArr];
   // next
   if (x.target.className === 'next') {
     let nextIndex;
-    // let currIndex;
     slides.forEach((x, index) => {
       if (x.classList.contains('active')) {
         nextIndex = index + 1;
@@ -53,7 +56,7 @@ nextOrPrevSlide.addEventListener('click', (x) => {
   // prev
   if (x.target.className === 'previous') {
     let prevIndex;
-    // let currIndex;
+
     slides.forEach((x, index) => {
       if (x.classList.contains('active')) {
         prevIndex = index - 1;
@@ -66,3 +69,8 @@ nextOrPrevSlide.addEventListener('click', (x) => {
     slides[prevIndex].classList.add('active');
   }
 });
+
+// slideInterval
+// if (auto) {
+//   slideInterval = setInterval((nextSlides), intervalTime);
+// }
