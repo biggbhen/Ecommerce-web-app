@@ -172,13 +172,24 @@ header {
           border-radius: 5px;
         }
       }
-      .prodDetails {
-        p {
+      .prodDetailing {
+        h5 {
+          margin-top: 0.5rem;
+          font-size: 0.85rem;
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+          p {
+            margin-left: 0.5rem;
+            font-weight: 600;
+          }
+        }
+
+        > p {
           font-size: 0.85rem;
           text-overflow: ellipsis;
-        }
-        p + p {
-          margin-top: 0.5rem;
+          white-space: nowrap;
+          overflow: hidden;
         }
       }
     }
