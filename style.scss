@@ -161,7 +161,7 @@ header {
       justify-content: space-between;
       align-items: center;
       padding: 15px;
-      // display: none;
+      display: none;
       // border: 1px solid black;
       .productIcon {
         width: 45px;
@@ -202,7 +202,7 @@ header {
       padding: 15px;
 
       margin-bottom: 1rem;
-      // display: none;
+      display: none;
       button {
         width: 100%;
         padding: 10px;
@@ -220,7 +220,7 @@ header {
       align-items: center;
       font-weight: 600;
       color: #b4b5b9;
-      display: none;
+      // display: none;
     }
   }
   .active {
