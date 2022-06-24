@@ -14,6 +14,7 @@ const hamIcon = document.querySelector('.ham'),
   checkOut = document.querySelector('.checkOut'),
   emptyCart = document.querySelector('.emptyCart'),
   cartList = document.querySelector('.cartList '),
+  displayNum = document.querySelector('.displayNum'),
   auto = true,
   intervalTime = 5000;
 // console.log(addToCart);
@@ -98,9 +99,10 @@ addToCart.addEventListener('click', () => {
     cartList.style.display = 'flex';
     checkOut.style.display = 'flex';
     emptyCart.style.display = 'none';
+    displayNum.style.display = 'flex';
     let numOfProd = parseInt(numOfItems.textContent);
     quantity.textContent = `$${125}x ${numOfProd}`;
     amount.textContent = `$${125 * numOfProd}`;
-    // console.log(numOfProd);
+    displayNum.textContent = `${numOfProd}`;
   }
 });
