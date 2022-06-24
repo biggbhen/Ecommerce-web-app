@@ -161,6 +161,7 @@ header {
       justify-content: space-between;
       align-items: center;
       padding: 15px;
+      // display: none;
       // border: 1px solid black;
       .productIcon {
         width: 45px;
@@ -201,6 +202,7 @@ header {
       padding: 15px;
 
       margin-bottom: 1rem;
+      // display: none;
       button {
         width: 100%;
         padding: 10px;
@@ -210,6 +212,15 @@ header {
         border-radius: 6px;
         font-size: 1.05rem;
       }
+    }
+    .emptyCart {
+      height: 10rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      color: #b4b5b9;
+      display: none;
     }
   }
   .active {
