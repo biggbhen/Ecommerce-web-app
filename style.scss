@@ -176,20 +176,24 @@ header {
         h5 {
           margin-top: 0.5rem;
           font-size: 0.85rem;
-          display: flex;
-          align-items: center;
+          display: inline;
           font-weight: 500;
-          p {
-            margin-left: 0.5rem;
-            font-weight: 600;
-          }
+          color: #b4b5b9;
         }
-
+        h4 {
+          font-size: 0.85rem;
+          display: inline;
+          margin-left: 0.3rem;
+          font-weight: 600;
+          // color: #b4b5b9;
+        }
         > p {
           font-size: 0.85rem;
           text-overflow: ellipsis;
           white-space: nowrap;
           overflow: hidden;
+          color: #b4b5b9;
+          margin-bottom: 0.5rem;
         }
       }
     }
