@@ -112,6 +112,7 @@
     .productImage {
       height: 25rem;
       border-radius: 0;
+      transition: 0.4s height ease-out;
       .imageSlides {
         border-radius: 0;
         img {
