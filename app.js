@@ -17,9 +17,12 @@ const hamIcon = document.querySelector('.ham'),
   cartList = document.querySelector('.cartList '),
   displayNum = document.querySelector('.displayNum'),
   deleteItem = document.querySelector('.fa-trash-can'),
+  carousel = document.querySelector('.carousel'),
   lightBoxCarousel = document.querySelector('.LightBoxCarousel'),
   LBnext = document.querySelector('.LBnext'),
   LBprevious = document.querySelector('.LBprevious'),
+  lightBox = document.querySelector('.lightBox'),
+  closeLightBox = document.querySelector('.closeLightBox'),
   auto = true,
   intervalTime = 5000;
 // console.log(addToCart);
@@ -54,7 +57,10 @@ addOrRemoveItem.addEventListener('click', (x) => {
 nextOrPrevSlide.addEventListener('click', (x) => {
   let slides = [...imgArr];
   // next
-  if (x.target.className === 'next') {
+  if (
+    x.target.className === 'next' ||
+    x.target.className == 'fa-solid fa-angle-right'
+  ) {
     let nextIndex;
     slides.forEach((x, index) => {
       if (x.classList.contains('active')) {
@@ -68,7 +74,10 @@ nextOrPrevSlide.addEventListener('click', (x) => {
     slides[nextIndex].classList.add('active');
   }
   // prev
-  if (x.target.className === 'previous') {
+  if (
+    x.target.className === 'previous' ||
+    x.target.className == 'fa-solid fa-angle-left'
+  ) {
     let prevIndex;
 
     slides.forEach((x, index) => {
@@ -129,7 +138,10 @@ deleteItem.addEventListener('click', () => {
 lightBoxCarousel.addEventListener('click', (x) => {
   let slides = [...LBimgArr];
   // next
-  if (x.target.className === 'LBnext') {
+  if (
+    x.target.className === 'LBnext' ||
+    x.target.classList.contains('lightBoxNext')
+  ) {
     let nextIndex;
     slides.forEach((x, index) => {
       if (x.classList.contains('active')) {
@@ -143,7 +155,10 @@ lightBoxCarousel.addEventListener('click', (x) => {
     slides[nextIndex].classList.add('active');
   }
   // prev
-  if (x.target.className === 'LBprevious') {
+  if (
+    x.target.className === 'LBprevious' ||
+    x.target.classList.contains('lightBoxPrev')
+  ) {
     let prevIndex;
 
     slides.forEach((x, index) => {
@@ -158,3 +173,17 @@ lightBoxCarousel.addEventListener('click', (x) => {
     slides[prevIndex].classList.add('active');
   }
 });
+
+//open Lightbox function
+
+carousel.addEventListener('click', () => {
+  console.log('heeeeehe');
+  lightBox.style.display = 'block';
+});
+
+// close Lightbox function
+closeLightBox.addEventListener('click', () => {
+  const lightBox = document.querySelector('.lightBox');
+  lightBox.style.display = 'none';
+});
+console.log(carousel, lightBox);
