@@ -6,6 +6,105 @@
   text-decoration: none;
   font-family: 'Kumbh Sans', sans-serif;
 }
+.lightBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgba($color: #000000, $alpha: 0.75);
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // display: none;
+
+  .productDisplay {
+    margin: 8rem auto 0 auto;
+    width: 55%;
+    max-width: 25rem;
+    .productImage {
+      cursor: pointer;
+      height: 21rem;
+      border-radius: 6px;
+      position: relative;
+      .LightBoxImageSlides {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        overflow: hidden;
+        display: none;
+        // border: 1px solid red;
+
+        img {
+          width: 100%;
+          height: 100%;
+
+          border-radius: 6px;
+        }
+      }
+      .active {
+        display: block;
+      }
+    }
+
+    .products {
+      cursor: pointer;
+      height: 6rem;
+      // border: 1px solid black;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-around;
+      div {
+        width: 22%;
+        border-radius: 6px;
+        z-index: 2;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}
+.LightBoxCarousel {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background-color: rgba($color: #fff, $alpha: 1);
+    cursor: pointer;
+
+    i {
+      position: relative;
+      font-size: 1.3rem;
+      z-index: -1;
+    }
+  }
+  .LBprevious {
+    margin-left: -15px;
+    z-index: 10;
+  }
+  .LBnext {
+    margin-right: -15px;
+    z-index: 10;
+  }
+}
+
 .container {
   overflow: hidden;
   margin: auto;
@@ -133,15 +232,15 @@ header {
           justify-content: center;
           align-items: center;
           width: 15px;
-          height: 15px;
+          height: 12px;
           background-color: #ff7a16;
           color: #fff;
           border-radius: 9px;
-          top: -13px;
+          top: -8px;
           right: 0;
           z-index: -1;
           display: none;
-          font-size: 0.6rem;
+          font-size: 0.5rem;
         }
       }
       .cart:hover {
@@ -321,11 +420,9 @@ header {
 // animating product pix selections
 .productSlide {
   overflow: hidden;
-  // transition: transform 0.4s ease-in;
 }
 .productSlide:hover {
   img {
-    // overflow: hidden;
     transform: scale(1.05);
     transition: transform 0.5s ease-in;
   }
@@ -378,10 +475,10 @@ header {
     transition: transform 0.6s ease-in-out;
   }
 }
-.navigation .carousel div:hover {
-  // border: 1px solid red;
-  background-color: rgba($color: #fff, $alpha: 0.7);
-}
+// .navigation .carousel div:hover {
+//   // border: 1px solid red;
+//   background-color: rgba($color: #fff, $alpha: 0.7);
+// }
 .prouctDetails {
   display: flex;
   align-items: center;

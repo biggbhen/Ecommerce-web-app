@@ -43,6 +43,9 @@
 }
 
 @media (max-width: 575px) {
+  .lightBox {
+    display: none;
+  }
   header .ham {
     display: block;
   }
