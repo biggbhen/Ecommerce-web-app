@@ -5,6 +5,7 @@ const hamIcon = document.querySelector('.ham'),
   numOfItems = document.querySelector('.numOfItems'),
   nextOrPrevSlide = document.querySelector('.carousel'),
   imgArr = document.querySelectorAll('.imageSlides'),
+  LBimgArr = document.querySelectorAll('.LightBoxImageSlides'),
   prodArr = document.querySelectorAll('.productSlides'),
   cart = document.querySelector('.cart'),
   cartDetails = document.querySelector('.cartDetails'),
@@ -16,6 +17,9 @@ const hamIcon = document.querySelector('.ham'),
   cartList = document.querySelector('.cartList '),
   displayNum = document.querySelector('.displayNum'),
   deleteItem = document.querySelector('.fa-trash-can'),
+  lightBoxCarousel = document.querySelector('.LightBoxCarousel'),
+  LBnext = document.querySelector('.LBnext'),
+  LBprevious = document.querySelector('.LBprevious'),
   auto = true,
   intervalTime = 5000;
 // console.log(addToCart);
@@ -117,5 +121,40 @@ deleteItem.addEventListener('click', () => {
     checkOut.style.display = 'none';
     emptyCart.style.display = 'flex';
     displayNum.style.display = 'none';
+  }
+});
+
+// add lightBox
+// console.log(lightBoxCarousel);
+lightBoxCarousel.addEventListener('click', (x) => {
+  let slides = [...LBimgArr];
+  // next
+  if (x.target.className === 'LBnext') {
+    let nextIndex;
+    slides.forEach((x, index) => {
+      if (x.classList.contains('active')) {
+        nextIndex = index + 1;
+      }
+      x.classList.remove('active');
+    });
+    if (nextIndex > imgArr.length - 1) {
+      nextIndex = 0;
+    }
+    slides[nextIndex].classList.add('active');
+  }
+  // prev
+  if (x.target.className === 'LBprevious') {
+    let prevIndex;
+
+    slides.forEach((x, index) => {
+      if (x.classList.contains('active')) {
+        prevIndex = index - 1;
+      }
+      x.classList.remove('active');
+    });
+    if (prevIndex < 0) {
+      prevIndex = imgArr.length - 1;
+    }
+    slides[prevIndex].classList.add('active');
   }
 });
