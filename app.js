@@ -15,6 +15,7 @@ const hamIcon = document.querySelector('.ham'),
   emptyCart = document.querySelector('.emptyCart'),
   cartList = document.querySelector('.cartList '),
   displayNum = document.querySelector('.displayNum'),
+  deleteItem = document.querySelector('.fa-trash-can'),
   auto = true,
   intervalTime = 5000;
 // console.log(addToCart);
@@ -104,5 +105,17 @@ addToCart.addEventListener('click', () => {
     quantity.textContent = `$${125}x ${numOfProd}`;
     amount.textContent = `$${125 * numOfProd}`;
     displayNum.textContent = `${numOfProd}`;
+    // console.log(numOfProd);
+    numOfItems.textContent = '0';
+  }
+});
+
+// add delete functionality
+deleteItem.addEventListener('click', () => {
+  if (confirm('Remove iems?')) {
+    cartList.style.display = 'none';
+    checkOut.style.display = 'none';
+    emptyCart.style.display = 'flex';
+    displayNum.style.display = 'none';
   }
 });
