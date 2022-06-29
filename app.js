@@ -6,7 +6,8 @@ const hamIcon = document.querySelector('.ham'),
   nextOrPrevSlide = document.querySelector('.carousel'),
   imgArr = document.querySelectorAll('.imageSlides'),
   LBimgArr = document.querySelectorAll('.LightBoxImageSlides'),
-  prodArr = document.querySelectorAll('.productSlides'),
+  prodArr = document.querySelectorAll('.productSlide'),
+  LBprodArr = document.querySelectorAll('.LBproduct'),
   cart = document.querySelector('.cart'),
   cartDetails = document.querySelector('.cartDetails'),
   addToCart = document.querySelector('.addToCart'),
@@ -17,7 +18,7 @@ const hamIcon = document.querySelector('.ham'),
   cartList = document.querySelector('.cartList '),
   displayNum = document.querySelector('.displayNum'),
   deleteItem = document.querySelector('.fa-trash-can'),
-  carousel = document.querySelector('.carousel'),
+  product = document.querySelector('.products'),
   lightBoxCarousel = document.querySelector('.LightBoxCarousel'),
   LBnext = document.querySelector('.LBnext'),
   LBprevious = document.querySelector('.LBprevious'),
@@ -118,7 +119,7 @@ addToCart.addEventListener('click', () => {
     quantity.textContent = `$${125}x ${numOfProd}`;
     amount.textContent = `$${125 * numOfProd}`;
     displayNum.textContent = `${numOfProd}`;
-    // console.log(numOfProd);
+
     numOfItems.textContent = '0';
   }
 });
@@ -130,6 +131,7 @@ deleteItem.addEventListener('click', () => {
     checkOut.style.display = 'none';
     emptyCart.style.display = 'flex';
     displayNum.style.display = 'none';
+    counter = 0;
   }
 });
 
@@ -176,14 +178,14 @@ lightBoxCarousel.addEventListener('click', (x) => {
 
 //open Lightbox function
 
-carousel.addEventListener('click', () => {
-  console.log('heeeeehe');
-  lightBox.style.display = 'block';
+product.addEventListener('click', (x) => {
+  if (x.target.classList.contains('productslide')) {
+    console.log('object');
+  }
 });
 
 // close Lightbox function
 closeLightBox.addEventListener('click', () => {
-  const lightBox = document.querySelector('.lightBox');
-  lightBox.style.display = 'none';
+  lightBox.classList.remove('active');
 });
-console.log(carousel, lightBox);
+// console.dir(prodArr);
