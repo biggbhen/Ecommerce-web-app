@@ -41,6 +41,7 @@ hamIcon.addEventListener('click', (e) => {
 // add counter functionality
 let counter = 0;
 addOrRemoveItem.addEventListener('click', (x) => {
+  // console.log(x.target);
   if (x.target.className === 'fa-solid fa-plus') {
     counter++;
     numOfItems.textContent = counter;
@@ -177,11 +178,13 @@ lightBoxCarousel.addEventListener('click', (x) => {
 });
 
 //open Lightbox function
-
-product.addEventListener('click', (x) => {
-  if (x.target.classList.contains('productslide')) {
-    console.log('object');
+// console.log(product);
+product.addEventListener('click', (e) => {
+  if (e.target.className == 'prodImg') {
+    lightBox.classList.add('active');
   }
+
+  console.log(e.target, imgArr);
 });
 
 // close Lightbox function
