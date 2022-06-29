@@ -180,11 +180,19 @@ lightBoxCarousel.addEventListener('click', (x) => {
 //open Lightbox function
 // console.log(product);
 product.addEventListener('click', (e) => {
+  let slides = [...LBimgArr];
   if (e.target.className == 'prodImg') {
     lightBox.classList.add('active');
+    for (let i = 0; i < slides.length; i++) {
+      const element = slides[i];
+      element.classList.remove('active');
+      if (e.target.src == element.firstElementChild.src) {
+        element.classList.add('active');
+      }
+    }
   }
 
-  console.log(e.target, imgArr);
+  // console.log([...prodArr], e.target.parentElement);
 });
 
 // close Lightbox function
