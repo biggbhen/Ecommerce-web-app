@@ -19,6 +19,7 @@ const hamIcon = document.querySelector('.ham'),
   displayNum = document.querySelector('.displayNum'),
   deleteItem = document.querySelector('.fa-trash-can'),
   product = document.querySelector('.products'),
+  LBproduct = document.querySelector('.LBproducts'),
   lightBoxCarousel = document.querySelector('.LightBoxCarousel'),
   LBnext = document.querySelector('.LBnext'),
   LBprevious = document.querySelector('.LBprevious'),
@@ -26,7 +27,7 @@ const hamIcon = document.querySelector('.ham'),
   closeLightBox = document.querySelector('.closeLightBox'),
   auto = true,
   intervalTime = 5000;
-// console.log(addToCart);
+// console.log(LBproduct);
 // side bar
 hamIcon.addEventListener('click', (e) => {
   if (e.target.className === 'fa-solid fa-bars') {
@@ -137,7 +138,7 @@ deleteItem.addEventListener('click', () => {
 });
 
 // add lightBox
-// console.log(lightBoxCarousel);
+
 lightBoxCarousel.addEventListener('click', (x) => {
   let slides = [...LBimgArr];
   // next
@@ -191,12 +192,22 @@ product.addEventListener('click', (e) => {
       }
     }
   }
+});
 
-  // console.log([...prodArr], e.target.parentElement);
+LBproduct.addEventListener('click', (e) => {
+  let slides = [...LBimgArr];
+  if (e.target.className == 'LBprodImg') {
+    for (let i = 0; i < slides.length; i++) {
+      const element = slides[i];
+      element.classList.remove('active');
+      if (e.target.src == element.firstElementChild.src) {
+        element.classList.add('active');
+      }
+    }
+  }
 });
 
 // close Lightbox function
 closeLightBox.addEventListener('click', () => {
   lightBox.classList.remove('active');
 });
-// console.dir(prodArr);
