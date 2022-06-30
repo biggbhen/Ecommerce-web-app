@@ -225,9 +225,11 @@ header {
         li {
           display: flex;
           align-items: center;
+          padding-bottom: 3px;
         }
         li:hover {
           border-bottom: 3px solid #ff7a16;
+          padding-bottom: 0;
           a {
             color: #000;
           }

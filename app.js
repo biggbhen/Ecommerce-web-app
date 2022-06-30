@@ -28,7 +28,19 @@ const hamIcon = document.querySelector('.ham'),
   closeLightBox = document.querySelector('.closeLightBox'),
   auto = true,
   intervalTime = 5000;
-// console.log(LBproduct);
+document.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('numOfProd') != null) {
+    // console.log(Number(localStorage.getItem('numOfProd')));
+    numOfProd = localStorage.getItem('numOfProd');
+    cartList.style.display = 'flex';
+    checkOut.style.display = 'flex';
+    emptyCart.style.display = 'none';
+    displayNum.style.display = 'flex';
+    quantity.textContent = `$${125}x ${numOfProd}`;
+    amount.textContent = `$${125 * numOfProd}`;
+    displayNum.textContent = `${numOfProd}`;
+  }
+});
 // side bar
 hamIcon.addEventListener('click', (e) => {
   if (e.target.className === 'fa-solid fa-bars') {
@@ -129,10 +141,12 @@ addToCart.addEventListener('click', () => {
     emptyCart.style.display = 'none';
     displayNum.style.display = 'flex';
     let numOfProd = parseInt(numOfItems.textContent);
+    localStorage.setItem('numOfProd', numOfProd);
     quantity.textContent = `$${125}x ${numOfProd}`;
     amount.textContent = `$${125 * numOfProd}`;
     displayNum.textContent = `${numOfProd}`;
     numOfItems.textContent = '0';
+    counter = 0;
   }
 });
 closeCart.addEventListener('click', () => {
@@ -147,6 +161,7 @@ deleteItem.addEventListener('click', () => {
     emptyCart.style.display = 'flex';
     displayNum.style.display = 'none';
     counter = 0;
+    localStorage.clear();
   }
 });
 
