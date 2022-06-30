@@ -60,8 +60,7 @@ addOrRemoveItem.addEventListener('click', (x) => {
 nextOrPrevSlide.addEventListener('click', (x) => {
   let slides = [...imgArr],
     productSlide = [...prodArr];
-  console.log(productSlide);
-  console.log(productSlide);
+  // console.log(productSlide[0]);
 
   // next
   if (
@@ -81,17 +80,20 @@ nextOrPrevSlide.addEventListener('click', (x) => {
       nextIndex = 0;
     }
     slides[nextIndex].classList.add('active');
+    productSlide[currIndex].classList.remove('activeState');
+    productSlide[nextIndex].classList.add('activeState');
   }
   // prev
   if (
     x.target.className === 'previous' ||
     x.target.className == 'fa-solid fa-angle-left'
   ) {
-    let prevIndex;
+    let prevIndex, currIndex;
 
     slides.forEach((x, index) => {
       if (x.classList.contains('active')) {
         prevIndex = index - 1;
+        currIndex = index;
       }
       x.classList.remove('active');
     });
@@ -99,6 +101,8 @@ nextOrPrevSlide.addEventListener('click', (x) => {
       prevIndex = imgArr.length - 1;
     }
     slides[prevIndex].classList.add('active');
+    productSlide[currIndex].classList.remove('activeState');
+    productSlide[prevIndex].classList.add('activeState');
   }
 });
 
@@ -145,16 +149,18 @@ deleteItem.addEventListener('click', () => {
 // add lightBox
 
 lightBoxCarousel.addEventListener('click', (x) => {
-  let slides = [...LBimgArr];
-  // next
+  let slides = [...LBimgArr],
+    productSlide = [...LBprodArr];
+
   if (
     x.target.className === 'LBnext' ||
     x.target.classList.contains('lightBoxNext')
   ) {
-    let nextIndex;
+    let nextIndex, currIndex;
     slides.forEach((x, index) => {
       if (x.classList.contains('active')) {
         nextIndex = index + 1;
+        currIndex = index;
       }
       x.classList.remove('active');
     });
@@ -162,17 +168,20 @@ lightBoxCarousel.addEventListener('click', (x) => {
       nextIndex = 0;
     }
     slides[nextIndex].classList.add('active');
+    productSlide[currIndex].classList.remove('activeState');
+    productSlide[nextIndex].classList.add('activeState');
   }
   // prev
   if (
     x.target.className === 'LBprevious' ||
     x.target.classList.contains('lightBoxPrev')
   ) {
-    let prevIndex;
+    let prevIndex, currIndex;
 
     slides.forEach((x, index) => {
       if (x.classList.contains('active')) {
         prevIndex = index - 1;
+        currIndex = index;
       }
       x.classList.remove('active');
     });
@@ -180,34 +189,46 @@ lightBoxCarousel.addEventListener('click', (x) => {
       prevIndex = imgArr.length - 1;
     }
     slides[prevIndex].classList.add('active');
+    productSlide[currIndex].classList.remove('activeState');
+    productSlide[prevIndex].classList.add('activeState');
   }
 });
 
 //open Lightbox function
 product.addEventListener('click', (e) => {
-  let slides = [...LBimgArr];
+  let slides = [...LBimgArr],
+    productSlide = [...LBprodArr],
+    currIndex;
   if (e.target.className == 'prodImg') {
     lightBox.classList.add('active');
-    for (let i = 0; i < slides.length; i++) {
-      const element = slides[i];
-      element.classList.remove('active');
-      if (e.target.src == element.firstElementChild.src) {
-        element.classList.add('active');
+    slides.forEach((item, index) => {
+      currIndex = index;
+      item.classList.remove('active');
+      if (e.target.src == item.firstElementChild.src) {
+        item.classList.add('active');
+        productSlide[currIndex].classList.add('activeState');
       }
-    }
+    });
   }
 });
 
 LBproduct.addEventListener('click', (e) => {
-  let slides = [...LBimgArr];
+  let slides = [...LBimgArr],
+    productSlide = [...LBprodArr],
+    currIndex;
+
   if (e.target.className == 'LBprodImg') {
-    for (let i = 0; i < slides.length; i++) {
-      const element = slides[i];
-      element.classList.remove('active');
-      if (e.target.src == element.firstElementChild.src) {
-        element.classList.add('active');
+    slides.forEach((item, index) => {
+      currIndex = index;
+      item.classList.remove('active');
+      if (e.target.src == item.firstElementChild.src) {
+        item.classList.add('active');
+        productSlide.forEach((x) => {
+          x.classList.remove('activeState');
+        });
+        productSlide[currIndex].classList.add('activeState');
       }
-    }
+    });
   }
 });
 

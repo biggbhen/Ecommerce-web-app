@@ -13,7 +13,7 @@
   bottom: 0;
   right: 0;
   z-index: 8;
-  background-color: rgba($color: #000000, $alpha: 0.75);
+  background-color: rgba($color: #000000, $alpha: 0.9);
 
   display: none;
 
@@ -125,6 +125,10 @@
       height: 100%;
       border-radius: 6px;
     }
+  }
+  .activeState {
+    outline: 4px solid #ff7a16;
+    opacity: 0.5;
   }
 }
 
@@ -246,10 +250,7 @@ header {
       .cart {
         width: 25px;
         position: relative;
-        // background-color: #fff;
-        // img {
-        //   background-color: #fff;
-        // }
+
         .displayNum {
           position: absolute;
           display: flex;
@@ -433,16 +434,17 @@ header {
       width: 22%;
       border-radius: 6px;
       overflow: hidden;
-      .activeState {
-        outline: 3px solid #ff7a16;
-        opacity: 0.5;
-      }
+
       img {
         width: 100%;
         height: 100%;
         // display: none;
         border-radius: 6px;
       }
+    }
+    .activeState {
+      outline: 3px solid #ff7a16;
+      opacity: 0.5;
     }
   }
 }
@@ -451,7 +453,8 @@ header {
 .LBproduct {
   overflow: hidden;
 }
-.productSlide:hover {
+.productSlide:hover,
+.LBproduct:hover {
   opacity: 0.5;
   img {
     transform: scale(1.05);
