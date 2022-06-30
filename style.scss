@@ -296,10 +296,16 @@ header {
     display: none;
 
     .myCart {
+      display: flex;
+      justify-content: space-between;
       padding: 15px;
       border-bottom: 1px solid #b4b5b9;
       h4 {
         font-size: 1rem;
+      }
+      .closeCart {
+        font-size: 1rem;
+        cursor: pointer;
       }
     }
 

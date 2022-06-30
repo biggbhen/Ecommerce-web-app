@@ -18,6 +18,7 @@ const hamIcon = document.querySelector('.ham'),
   cartList = document.querySelector('.cartList '),
   displayNum = document.querySelector('.displayNum'),
   deleteItem = document.querySelector('.fa-trash-can'),
+  closeCart = document.querySelector('.closeCart'),
   product = document.querySelector('.products'),
   LBproduct = document.querySelector('.LBproducts'),
   lightBoxCarousel = document.querySelector('.LightBoxCarousel'),
@@ -133,6 +134,9 @@ addToCart.addEventListener('click', () => {
     displayNum.textContent = `${numOfProd}`;
     numOfItems.textContent = '0';
   }
+});
+closeCart.addEventListener('click', () => {
+  cartDetails.classList.remove('active');
 });
 
 // add delete functionality
