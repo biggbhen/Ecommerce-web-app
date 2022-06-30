@@ -424,16 +424,23 @@ header {
   .products {
     cursor: pointer;
     height: 6rem;
-    // border: 1px solid black;
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
+    // border: 2px solid #000;
+
     div {
       width: 22%;
       border-radius: 6px;
+      overflow: hidden;
+      .activeState {
+        outline: 3px solid #ff7a16;
+        opacity: 0.5;
+      }
       img {
         width: 100%;
         height: 100%;
+        // display: none;
         border-radius: 6px;
       }
     }
@@ -441,10 +448,11 @@ header {
 }
 
 // animating product pix selections
-.productSlide {
+.LBproduct {
   overflow: hidden;
 }
 .productSlide:hover {
+  opacity: 0.5;
   img {
     transform: scale(1.05);
     transition: transform 0.5s ease-in;
@@ -452,12 +460,9 @@ header {
 }
 // navigations
 .navigation {
-  // border: 2px solid red;
-
   .carousel {
     width: 100%;
     height: 100%;
-
     position: absolute;
     display: flex;
     align-items: center;

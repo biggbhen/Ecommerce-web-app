@@ -58,16 +58,22 @@ addOrRemoveItem.addEventListener('click', (x) => {
 
 // carousel slide
 nextOrPrevSlide.addEventListener('click', (x) => {
-  let slides = [...imgArr];
+  let slides = [...imgArr],
+    productSlide = [...prodArr];
+  console.log(productSlide);
+  console.log(productSlide);
+
   // next
   if (
     x.target.className === 'next' ||
     x.target.className == 'fa-solid fa-angle-right'
   ) {
-    let nextIndex;
+    let nextIndex, currIndex;
+
     slides.forEach((x, index) => {
       if (x.classList.contains('active')) {
         nextIndex = index + 1;
+        currIndex = index;
       }
       x.classList.remove('active');
     });
@@ -121,7 +127,6 @@ addToCart.addEventListener('click', () => {
     quantity.textContent = `$${125}x ${numOfProd}`;
     amount.textContent = `$${125 * numOfProd}`;
     displayNum.textContent = `${numOfProd}`;
-
     numOfItems.textContent = '0';
   }
 });
@@ -179,7 +184,6 @@ lightBoxCarousel.addEventListener('click', (x) => {
 });
 
 //open Lightbox function
-// console.log(product);
 product.addEventListener('click', (e) => {
   let slides = [...LBimgArr];
   if (e.target.className == 'prodImg') {
