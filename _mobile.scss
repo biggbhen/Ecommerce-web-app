@@ -142,18 +142,6 @@
         font-size: clamp(1.3rem, 2.5vw, 1.5rem);
         font-weight: 800;
       }
-      .percentReduction {
-        // font-size: clamp(1rem, 2vw, 1.1rem);
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #e3905a;
-        background-color: #feeedf;
-        padding: 0;
-      }
-      .priceSlash {
-        font-size: clamp(0.8rem, 2vw, 1.2rem);
-      }
     }
     p {
       font-size: clamp(0.9rem, 2vw, 1.2rem);
