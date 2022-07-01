@@ -18,20 +18,22 @@ body {
   left: 0;
   bottom: 0;
   z-index: 5;
+  // border: 2px solid white;
   background-color: rgba($color: #000000, $alpha: 0.9);
   display: none;
   .productDisplay {
-    margin: 8rem auto 0 auto;
-    // width: 55%;
-    max-width: 25rem;
+    margin: 6rem auto 0 auto;
+    height: 65%;
+    // border: 2px solid white;
+    max-width: 30rem;
     .productImage {
       cursor: pointer;
-      height: 21rem;
+      height: 80%;
       border-radius: 6px;
       position: relative;
       .closeLightBox {
         position: absolute;
-        top: -4rem;
+        top: -3rem;
         right: 0;
         font-size: 1.4rem;
         color: #fff;
@@ -49,7 +51,6 @@ body {
         img {
           width: 100%;
           height: 100%;
-
           border-radius: 6px;
         }
       }
@@ -57,47 +58,24 @@ body {
         display: block;
       }
     }
-
-    .products {
-      cursor: pointer;
-      height: 5rem;
-      // border: 1px solid black;
-      margin-top: 1rem;
-      display: flex;
-      justify-content: space-around;
-      div {
-        width: 20%;
-        border-radius: 6px;
-        z-index: 2;
-        img {
-          width: 100%;
-          height: 100%;
-          border-radius: 6px;
-        }
-      }
-    }
   }
 }
 .LightBoxCarousel {
   width: 100%;
   height: 100%;
-
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   div {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
-
     border-radius: 50%;
     background-color: rgba($color: #fff, $alpha: 1);
     cursor: pointer;
-
     i {
       position: relative;
       font-size: 1.3rem;
@@ -115,9 +93,9 @@ body {
 }
 .LBproducts {
   cursor: pointer;
-  height: 6rem;
+  height: 16%;
   // border: 1px solid black;
-  margin-top: 1rem;
+  margin-top: 4%;
   display: flex;
   justify-content: space-around;
   div {
@@ -437,7 +415,7 @@ header {
 
   .products {
     cursor: pointer;
-    height: 6rem;
+    height: 5rem;
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
