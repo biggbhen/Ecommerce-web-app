@@ -6,18 +6,23 @@
   text-decoration: none;
   font-family: 'Kumbh Sans', sans-serif;
 }
+body {
+  top: 0;
+
+  bottom: 0;
+}
 .lightBox {
-  position: absolute;
+  position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
   bottom: 0;
-  right: 0;
   z-index: 5;
   background-color: rgba($color: #000000, $alpha: 0.9);
   display: none;
   .productDisplay {
     margin: 8rem auto 0 auto;
-    width: 55%;
+    // width: 55%;
     max-width: 25rem;
     .productImage {
       cursor: pointer;
@@ -141,7 +146,7 @@
 }
 
 .hamburger {
-  position: absolute;
+  position: fixed;
   z-index: 4;
   top: 0;
   left: 0;
