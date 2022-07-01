@@ -23,9 +23,10 @@ body {
   display: none;
   .productDisplay {
     margin: 6rem auto 0 auto;
-    height: 65%;
+    height: 70%;
     // border: 2px solid white;
-    max-width: 30rem;
+    width: 55%;
+    // max-width: 30rem;
     .productImage {
       cursor: pointer;
       height: 80%;
@@ -33,7 +34,7 @@ body {
       position: relative;
       .closeLightBox {
         position: absolute;
-        top: -3rem;
+        top: -2rem;
         right: 0;
         font-size: 1.4rem;
         color: #fff;
