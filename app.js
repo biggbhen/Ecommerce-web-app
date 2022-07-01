@@ -152,7 +152,7 @@ addToCart.addEventListener('click', () => {
     amount.textContent = `$${125 * numOfProd}`;
     displayNum.textContent = `${numOfProd}`;
     numOfItems.textContent = '0';
-    counter = 0;
+    // counter = 0;
   }
 });
 closeCart.addEventListener('click', () => {
