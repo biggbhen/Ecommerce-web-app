@@ -27,7 +27,7 @@ const hamIcon = document.querySelector('.ham'),
   lightBox = document.querySelector('.lightBox'),
   closeLightBox = document.querySelector('.closeLightBox'),
   auto = true,
-  intervalTime = 5000;
+  intervalTime = 4000;
 document.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('numOfProd') != null) {
     // console.log(Number(localStorage.getItem('numOfProd')));
@@ -70,59 +70,65 @@ addOrRemoveItem.addEventListener('click', (x) => {
 });
 
 // carousel slide
-nextOrPrevSlide.addEventListener('click', (x) => {
+function nextSlide() {
+  let nextIndex, currIndex;
   let slides = [...imgArr],
     productSlide = [...prodArr];
-  // console.log(productSlide[0]);
 
+  slides.forEach((x, index) => {
+    if (x.classList.contains('active')) {
+      nextIndex = index + 1;
+      currIndex = index;
+    }
+    x.classList.remove('active');
+  });
+  if (nextIndex > imgArr.length - 1) {
+    nextIndex = 0;
+  }
+  slides[nextIndex].classList.add('active');
+  productSlide[currIndex].classList.remove('activeState');
+  productSlide[nextIndex].classList.add('activeState');
+}
+function prevSlide() {
+  let prevIndex, currIndex;
+  let slides = [...imgArr],
+    productSlide = [...prodArr];
+
+  slides.forEach((x, index) => {
+    if (x.classList.contains('active')) {
+      prevIndex = index - 1;
+      currIndex = index;
+    }
+    x.classList.remove('active');
+  });
+  if (prevIndex < 0) {
+    prevIndex = imgArr.length - 1;
+  }
+  slides[prevIndex].classList.add('active');
+  productSlide[currIndex].classList.remove('activeState');
+  productSlide[prevIndex].classList.add('activeState');
+}
+nextOrPrevSlide.addEventListener('click', (x) => {
   // next
   if (
     x.target.className === 'next' ||
     x.target.className == 'fa-solid fa-angle-right'
   ) {
-    let nextIndex, currIndex;
-
-    slides.forEach((x, index) => {
-      if (x.classList.contains('active')) {
-        nextIndex = index + 1;
-        currIndex = index;
-      }
-      x.classList.remove('active');
-    });
-    if (nextIndex > imgArr.length - 1) {
-      nextIndex = 0;
-    }
-    slides[nextIndex].classList.add('active');
-    productSlide[currIndex].classList.remove('activeState');
-    productSlide[nextIndex].classList.add('activeState');
+    nextSlide();
   }
   // prev
   if (
     x.target.className === 'previous' ||
     x.target.className == 'fa-solid fa-angle-left'
   ) {
-    let prevIndex, currIndex;
-
-    slides.forEach((x, index) => {
-      if (x.classList.contains('active')) {
-        prevIndex = index - 1;
-        currIndex = index;
-      }
-      x.classList.remove('active');
-    });
-    if (prevIndex < 0) {
-      prevIndex = imgArr.length - 1;
-    }
-    slides[prevIndex].classList.add('active');
-    productSlide[currIndex].classList.remove('activeState');
-    productSlide[prevIndex].classList.add('activeState');
+    prevSlide();
   }
 });
 
 // slideInterval
-// if (auto) {
-//   slideInterval = setInterval((nextSlides), intervalTime);
-// }
+if (auto) {
+  slideInterval = setInterval(nextSlide, intervalTime);
+}
 
 // display cart details
 cart.addEventListener('click', (e) => {
