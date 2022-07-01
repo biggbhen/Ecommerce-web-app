@@ -328,6 +328,9 @@ header {
           border-radius: 5px;
         }
       }
+      i {
+        cursor: pointer;
+      }
       .prodDetailing {
         h5 {
           margin-top: 0.5rem;
@@ -355,7 +358,6 @@ header {
     }
     .checkOut {
       padding: 15px;
-
       margin-bottom: 1rem;
       display: none;
       button {
