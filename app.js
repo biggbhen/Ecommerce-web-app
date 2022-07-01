@@ -26,8 +26,8 @@ const hamIcon = document.querySelector('.ham'),
   LBprevious = document.querySelector('.LBprevious'),
   lightBox = document.querySelector('.lightBox'),
   closeLightBox = document.querySelector('.closeLightBox'),
-  auto = true,
-  intervalTime = 4000;
+  intervalTime = 5000;
+let auto = true;
 document.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('numOfProd') != null) {
     // console.log(Number(localStorage.getItem('numOfProd')));
@@ -257,7 +257,7 @@ LBproduct.addEventListener('click', (e) => {
   }
 });
 
-// close Lightbox function
+// close Lightbox
 closeLightBox.addEventListener('click', () => {
   lightBox.classList.remove('active');
 });
