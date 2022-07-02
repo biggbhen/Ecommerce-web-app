@@ -22,19 +22,19 @@ body {
   background-color: rgba($color: #000000, $alpha: 0.9);
   display: none;
   .productDisplay {
-    margin: 6rem auto 0 auto;
-    height: 60%;
+    margin: 8rem auto 0 auto;
+    height: 27rem;
     // border: 2px solid white;
-    width: 55%;
-    // max-width: 30rem;
+
+    max-width: 25rem;
     .productImage {
       cursor: pointer;
-      height: 80%;
+      height: 75%;
       border-radius: 6px;
       position: relative;
       .closeLightBox {
         position: absolute;
-        top: -2rem;
+        top: -3rem;
         right: 0;
         font-size: 1.4rem;
         color: #fff;
@@ -94,9 +94,9 @@ body {
 }
 .LBproducts {
   cursor: pointer;
-  height: 16%;
+  height: 21%;
   // border: 1px solid black;
-  margin-top: 4%;
+  margin-top: 3%;
   display: flex;
   justify-content: space-around;
   div {
@@ -109,7 +109,7 @@ body {
     }
   }
   .activeState {
-    outline: 4px solid #ff7a16;
+    outline: 3px solid #ff7a16;
     opacity: 0.5;
   }
 }
